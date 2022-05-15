@@ -88,6 +88,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 //            CharSequence charStrId = lvid.getText();
             int strId = Integer.parseInt(String.valueOf(adapter.getItemId(position)));
             String strText = lvtext.getText().toString();
+            Log.d("strText", strText);
             Intent noteEditor = new Intent(
                     MainActivity.this,
                     NoteEditorActivity.class);
@@ -102,8 +103,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
 //        TextView lvid = view.findViewById(R.id.dbid);
         TextView lvtext = view.findViewById(R.id.dbtext);
-//        Log.w("qq", String.valueOf(lvid.getText()));
-        Log.w("qq", String.valueOf(adapter.getItemId(position)));
 
         db.delete("notes", "_id = ?",
                 new String[]{String.valueOf(adapter.getItemId(position))});
