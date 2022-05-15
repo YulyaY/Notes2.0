@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Notes2.0</string>
+    <string name="type_something">type something...</string>
+    <string name="type_your_changes_of_this_note">Type your changes of this note:</string>
+</resources>
